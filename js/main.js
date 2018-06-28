@@ -5,8 +5,8 @@ var gSearchStr = '';
 
 function init() {
 
-    onSearch('eyal golan');
     getSearches();
+    onSearch('eyal golan');
 
 }
 
