@@ -5,8 +5,9 @@ var gSearchStr = '';
 
 function init() {
 
-    getSearches();
     onSearch('eyal golan');
+    getSearches();
+
 }
 
 function getSearches() {
@@ -70,7 +71,7 @@ function onVideoSelected(ytId) {
         elFrameSelected.src = `https://www.youtube.com/embed/${ytId}`;
         askItemWiki(gSearchStr);
         setTimeout(function(){
-            elLoad.classList.add('hide')},550)
+            elLoad.classList.add('hide')},600)
     }
     
     
