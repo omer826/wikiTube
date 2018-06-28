@@ -89,21 +89,27 @@ function renderTxtWiki(wikiData) {
     var txtLinks = wikiData[3];
     strHtml += subTxt;
 
-    for (var i = 0; i < dataLen; i++) {
-        var currSubLine = subTxt[i];
-        var currMainLine = mainTxt[i];
-        var currLinkLine = txtLinks[i];
-        if (currLinkLine === '') currLinkLine = wikiHomeLink;
-        if (currMainLine === '') currMainLine = 'No details about your serch';
-
+    if (subTxt.length > 0 && mainTxt.length > 0){
+        for (var i = 0; i < dataLen; i++) {
+            var currSubLine = subTxt[i];
+            var currMainLine = mainTxt[i];
+            var currLinkLine = txtLinks[i];
+            if (currLinkLine === '') currLinkLine = wikiHomeLink;
+            if (currMainLine === '') currMainLine = 'No details about your serch';
+    
+            strHtml += `<li class="wiki-data-item">
+            <h4>${currSubLine}</h4>
+            <p>${currMainLine}</p>
+            <button onclick="onReadMore('${currLinkLine}')" class="btn">Read More</button>
+            </li>`
+        }
+    
+    } else{
         strHtml += `<li class="wiki-data-item">
-        <h4>${currSubLine}</h4>
-        <p>${currMainLine}</p>
-        <button onclick="onReadMore('${currLinkLine}')" class="btn">Read More</button>
+        <p>No details about your serch</p>
         </li>`
-
     }
-
+   
     elWikiData.innerHTML = strHtml;
 }
 

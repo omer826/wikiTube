@@ -83,6 +83,7 @@ header h1 {
 }
 .top-result {
     padding: 5px;
+    margin: 5px 0 0 0;
 }
 .theme-section {
     justify-content: flex-end;
