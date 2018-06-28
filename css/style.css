@@ -114,6 +114,7 @@ main {
     background-size: cover;
     grid-column: 10/-1;
     grid-row: 2/3;
+    z-index: -1;
 }
 
 .btn {

@@ -58,16 +58,17 @@ function onkeyDown(el, ev) {
 
 function onVideoSelected(ytId) {
     var elFrameSelected = document.querySelector('.selected-video iframe');
-    var elLoad = document.querySelector('.loading');
     var elTop = document.querySelector('.top-result')
     elTop.scrollIntoView();
 
     if (ytId) {
         elFrameSelected.src = `https://www.youtube.com/embed/${ytId}`;
-        askItemWiki(gSearchStr);
-        setTimeout(function () {
+        elFrameSelected.onload = function(){
+            var elLoad = document.querySelector('.loading');
             elLoad.classList.add('hide')
-        }, 600)
+        }
+        askItemWiki(gSearchStr);
+     
     }
 }
 
@@ -109,6 +110,10 @@ function renderTxtWiki(wikiData) {
     }
 
     elWikiData.innerHTML = strHtml;
+}
+
+function videoLoad(){
+
 }
 
 function onReadMore(href) {
