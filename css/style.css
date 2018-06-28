@@ -81,10 +81,10 @@ header h1 {
     background-color: rgb(66, 63, 63);
 
 }
-.top-result {
+/* .top-result {
     padding: 5px;
     margin: 5px 0 0 0;
-}
+} */
 .theme-section {
     justify-content: flex-end;
     padding: 0 10px;
@@ -102,6 +102,8 @@ main {
     grid-gap: 30px;
     padding: 5px;
     position: relative;
+    margin: 0 auto;
+    max-width: 1350px;
 }
 
 .loading {
@@ -133,6 +135,7 @@ main {
 /* list video */
 .result-yt {
     padding: 5px;
+    margin: 5px 0 0 0;
 }
 
 .result-yt-container{

@@ -15,7 +15,6 @@ function initSearch() {
     return searches;
 }
 
-
 function askYoutubeLink(searchStr) {
     var http = `https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&type=video&key=${YT_KEY}&q=${searchStr}`;
     console.log(http)
@@ -27,7 +26,6 @@ function askYoutubeLink(searchStr) {
         console.error('Had Problem:', err)
     });
 }
-
 
 function askItemWiki(searchStr) {
     var http = `https://en.wikipedia.org/w/api.php?&origin=*&action=opensearch&search=${searchStr}&limit=5`;
@@ -42,14 +40,11 @@ function askItemWiki(searchStr) {
     });
 }
 
-
-
 function saveSearches(txtSearch) {
     gSearch.push(txtSearch);
     gSearch = new Set(gSearch);
     gSearch = Array.from(gSearch);
     saveToStorage(SEARCH_KEY, gSearch);
-
 }
 
 function getSearchesToDisplay() {
@@ -61,7 +56,6 @@ function clearLocalStorage() {
     localStorage.removeItem(SEARCH_KEY);
     gSearch = [];
 }
-
 
 function confirmClearHistory() {
     swal({
@@ -82,9 +76,7 @@ function confirmClearHistory() {
                 swal("Your history of searches is safe!");
             }
         });
-
 }
-
 
 function setColor() {
     var bodyStyles = window.getComputedStyle(document.body);
