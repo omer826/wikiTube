@@ -4,9 +4,9 @@ var gSearchStr = '';
 
 
 function init() {
-
     getSearches();
     onSearch('eyal golan');
+
 
 }
 
@@ -21,7 +21,7 @@ function onSearch(txtSearch) {
 
     var elInput = document.querySelector('.search-input')
     txtSearch = !txtSearch ? elInput.value : txtSearch;
-    if (txtSearch.length > 0 || txtSearch !== null) {
+    if (txtSearch.length > 0 || txtSearch !== '') {
         gSearchStr = txtSearch;
         askYoutubeLink(txtSearch);
         saveSearches(txtSearch);

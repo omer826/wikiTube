@@ -81,7 +81,9 @@ header h1 {
     background-color: rgb(66, 63, 63);
 
 }
-
+.top-result {
+    padding: 5px;
+}
 .theme-section {
     justify-content: flex-end;
     padding: 0 10px;
@@ -128,6 +130,10 @@ main {
     box-shadow: 0 0 15px black;
 }
 /* list video */
+.result-yt {
+    padding: 5px;
+}
+
 .result-yt-container{
     grid-column: 1/6;
     grid-row: 12 span;

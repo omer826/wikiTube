@@ -10,7 +10,7 @@ function initSearch() {
     searches = loadFromStorage(SEARCH_KEY);
 
     if (!searches || searches.length === 0) {
-        searches = ['Your history is clean'];
+        searches = [];
     }
     return searches;
 }
